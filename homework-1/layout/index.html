@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta http-equive="X-UA-Compatible" content="ie-edge">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>BookList App</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center"><i class="fas fa-book-open text-primary"></i> <span class="text-secondary">Book</span> List</h1>
+        <p class="text-center">Add your book information to store it in database.</p>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <form id="add-book-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" name="book-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" name="book-author" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">ISBN#</label>
+                        <input type="text" name="book-isbn" class="form-control">
+                    </div>
+                    <input type="submit" value="Add Book" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+
+
+        <h3 id="book-count" class="book-count mt-5">Всего книг: 0</h3>
+        <table class="table table-striped mt-2">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN#</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+
+                <!-- Пример формы редактирования книги -->
+<!--
+                 <form action="" id="update-book-form">
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" name="book-name" class="form-control" value="Малазанская книга Падших">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" name="book-author" class="form-control" value="Стивен Эриксон">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" name="book-isbn" class="form-control" value="978-3-16-148410-0">
+                            </div>
+                        </td>                        
+                        <td><input type="submit" value="Update" class="btn btn-primary"></td>
+                        <td></td>
+                    </tr>
+                </form> 
+-->
+               
+                <!-- Пример отображения книги -->         
+<!--
+                 <tr data-id="12">
+                    <td>Малазанская книга Падших</td>
+                    <td>Стивен Эриксон</td>
+                    <td>978-3-16-148410-0</td>
+                    <td><a href="#" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="#" class="btn btn-danger btn-sm btn-delete">X</a></td>
+                </tr> 
+
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

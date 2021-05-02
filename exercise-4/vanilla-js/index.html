@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="accordion">
+            <div class="accordion-item">
+                <p class="title">
+                  First Question
+                </p>
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu interdum diam. Donec interdum porttitor risus non bibendum. Maecenas sollicitudin eros in quam imperdiet placerat. Cras justo purus, rhoncus nec lobortis ut, iaculis vel ipsum. Donec dignissim arcu nec elit faucibus condimentum. Donec facilisis consectetur enim sit amet varius. Pellentesque justo dui, sodales quis luctus a, iaculis eget mauris.
+        
+                    Aliquam dapibus, ante quis fringilla feugiat, mauris risus condimentum massa, at elementum libero quam ac ligula. Pellentesque at rhoncus dolor. Duis porttitor nibh ut lobortis aliquam. Nullam eu dolor venenatis mauris placerat tristique eget id dolor. Quisque blandit adipiscing erat vitae dapibus. Nulla aliquam magna nec elementum tincidunt.
+                  </p>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <script>
+        const accordionItems = document.querySelectorAll(".accordion-item");
+        accordionItems.forEach(item => item.addEventListener("click", function({target}){
+            if(target.classList.contains("title")) {
+                target.classList.toggle("is-expanded");
+                const content = this.querySelector(".content");
+                content.classList.toggle("is-expanded")
+            }
+        }))
+    </script>
+</body>
+</html>
