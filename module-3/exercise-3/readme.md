@@ -7,4 +7,4 @@ Star wars. Оно должна работать так:
 - при нажатии на персонажа отображается подробная информация о персонажа во всплывающем окне(
 поля `name`, `gender`, `birth_year`, `hair_color` и `skin_color`)
 
-Для работы используйте этот API: https://swapi.py4e.com/documentation#people
+Для поиска используйте API `https://swapi.py4e.com/api/people/?search=people_name`
