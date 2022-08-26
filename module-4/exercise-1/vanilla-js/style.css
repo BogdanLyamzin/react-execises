@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+ html, body, #app {
+	 height: 100%;
+}
+ .container {
+	 min-height: 100%;
+	 padding: 30px;
+	 font-family: 'PT Sans';
+	 text-align: center;
+}
+ .container h1 {
+	 text-align: center;
+	 color: #1569a8;
+}
+ .container .btn {
+	 display: inline-block;
+	 margin-bottom: 20px;
+	 border: 1px solid #1569a8;
+	 background: white;
+	 color: #1569a8;
+	 padding: 5px 10px;
+	 border-radius: 5px;
+	 margin-right: 5px;
+	 font-size: 15px;
+	 cursor: pointer;
+	 outline: none;
+}
+ .container .btn:hover {
+	 background: #1569a8;
+	 color: white;
+	 transition: 0.5s;
+}
+ .accordion {
+	 margin: 0 auto;
+	 width: 80%;
+}
+ .accordion .title {
+	 padding: 30px 30px;
+	 cursor: pointer;
+	 transform: translate3d(0, 0, 0);
+	 color: white;
+	 position: relative;
+	 font-size: 20px;
+	 background: #1569a8;
+	 margin-bottom: -1px;
+	 border-bottom: 1px solid #0e4671;
+	 text-align: left;
+}
+ .accordion .title::after {
+	 content: "+";
+	 font-size: 18px;
+	 color: white;
+	 transition: transform 0.5s ease-in-out;
+	 position: absolute;
+	 right: 30px;
+	 font-family: monospace;
+}
+ .accordion .title.is-expanded {
+	 transition: background 0.5s;
+	 background: #0e4671;
+}
+ .accordion .title.is-expanded::after {
+	 content: "-";
+	 transform: rotate(-360deg);
+}
+ .accordion .content {
+	 overflow: hidden;
+	 max-height: 0;
+	 transition: max-height 0.5s;
+	 margin: 0;
+	 padding: 0 30px;
+	 border: solid 1px #eee;
+	 border-top: 0;
+	 background: #e8f4fc;
+}
+ .accordion .content p {
+	 padding: 30px 0;
+	 margin: 0;
+	 opacity: 0;
+	 transition: 0.5s;
+}
+ .accordion .content.is-expanded {
+	 max-height: 500px;
+	 overflow: hidden;
+}
+ .accordion .content.is-expanded p {
+	 opacity: 1;
+}
+ .accordion:after {
+	 width: 100%;
+	 height: 10px;
+	 display: block;
+	 background: #0e4671;
+	 content: '';
+}
+ 
